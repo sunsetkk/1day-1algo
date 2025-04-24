@@ -1,4 +1,4 @@
-// 문제 제목: [문제 제목]
+// 문제 제목: [01 배열 정렬하기]
 // 링크: [문제 링크]
 
 import java.util.*;
@@ -6,10 +6,20 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         // 입력 받기
+        String arrStr = sc.nextLine();
+        String[] s = arrStr.split(" ");
 
         // 풀이 로직
+        int[] arr = new int[s.length];
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.parseInt(s[i]);
+        }
+        Arrays.sort(arr);
 
         // 출력
+        System.out.println(Arrays.toString(arr));
     }
 }
